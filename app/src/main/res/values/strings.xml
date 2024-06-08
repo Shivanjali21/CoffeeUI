@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Coffee App</string>
+    <string name="a_s_k_coffee">A S K Coffee Beans</string>
+    <string name="a_special">A Special Coffee Beans From Madikeri</string>
+    <string name="pure_natural_coffee">PURE &amp; NATURAL COFFEE</string>
+    <string name="pure_coffee_tag">
+    Since 1963, we have scoured the world for the best coffee available anywhere and we expertly roast our beans in small batches for optimal flavor. We purchase our beans direct from coffee farmers building on decades-long relationships to ensure we get the top 1% of the best arabica beans in the world. So, we know where every coffee bean comes from. Now the same great coffee we use in our store locations are available in retail packages. Buy coffee online here.\u000d\n\nA S K COFFEE BEANS\u00ae brand\'s high standards make our coffee uniquely and uniformly delicious no matter which location you visit, anywhere in the world. Our Master Roaster has employed state of the art coffee roasting techniques and expert instincts to preserve the beloved ritual of coffee drinking. You can enjoy our renowned coffees at home, school, the office or wherever travels take you. When you buy coffee online, choose from whole coffee beans, ground coffee, organic coffee, single origin coffee, flavored and special reserved coffees with a variety of roasts. And for those times you need good coffee quickly, check out our single serving coffee products too.\u000d\n\u000d\n\n\u000d\n
+    </string>
+    <string name="buy_now">Buy Now</string>
+    <string name="learn_more">Learn More</string>
+    <string name="search_product">Search Product</string>
+    <string name="search_here">Search Here..</string>
+    <string name="coffee_price">400/-</string>
+    <string name="natural">Natural</string>
+    <string name="safe">Safe</string>
+    <string name="organic">Organic</string>
+    <string name="Rs">\u20B9</string>
+    <string name="decrement">-</string>
+    <string name="qty">1</string>
+    <string name="increment">+</string>
+    <string name="add">Add Quantity</string>
+    <string name="checkout">Checkout</string>
+    <string name="c_coffee_weight">Weight: 500gm</string>
+    <string name="c_coffee_price">₹ 500</string>
+    <string name="promo_code">Promo Code</string>
+    <string name="apply">Apply</string>
+    <string name="cart_subtotal">Subtotal</string>
+    <string name="cart_shipping">Shipping</string>
+    <string name="payment">Payments</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="credit_card">Credit Card</string>
+</resources>

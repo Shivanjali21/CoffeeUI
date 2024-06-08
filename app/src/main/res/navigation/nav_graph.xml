@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/coffeeFragment">
+
+    <fragment
+        android:id="@+id/coffeeFragment"
+        android:name="com.practice.coffeeapp.fragments.CoffeeFragment"
+        android:label="fragment_coffee"
+        tools:layout="@layout/fragment_coffee">
+        <action
+            android:id="@+id/action_coffeeFragment_to_coffeeSearchFragment"
+            app:destination="@id/coffeeSearchFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/coffeeSearchFragment"
+        android:name="com.practice.coffeeapp.fragments.CoffeeSearchFragment"
+        android:label="fragment_coffee_search"
+        tools:layout="@layout/fragment_coffee_search">
+        <action
+            android:id="@+id/action_coffeeSearchFragment_to_coffeeDetailFragment"
+            app:destination="@id/coffeeDetailFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/coffeeDetailFragment"
+        android:name="com.practice.coffeeapp.fragments.CoffeeDetailFragment"
+        android:label="fragment_coffee_detail"
+        tools:layout="@layout/fragment_coffee_detail">
+        <argument
+            android:name="coffeeData"
+            app:argType="com.practice.coffeeapp.model.CoffeeData"/>
+        <action
+            android:id="@+id/action_coffeeDetailFragment_to_coffeeCartFragment"
+            app:destination="@id/coffeeCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coffeeCartFragment"
+        android:name="com.practice.coffeeapp.fragments.CoffeeCartFragment"
+        android:label="fragment_coffee_cart"
+        tools:layout="@layout/fragment_coffee_cart">
+        <action
+            android:id="@+id/action_coffeeCartFragment_to_coffeePaymentFragment"
+            app:destination="@id/coffeePaymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coffeePaymentFragment"
+        android:name="com.practice.coffeeapp.fragments.CoffeePaymentFragment"
+        android:label="fragment_coffee_payment"
+        tools:layout="@layout/fragment_coffee_payment"/>
+</navigation>

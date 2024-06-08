@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CoffeeCartFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="6dp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBackArrowC"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:padding="6dp"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintEnd_toStartOf="@+id/mtvCheckout"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvCheckout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/centurygothic"
+            android:includeFontPadding="false"
+            android:text="@string/checkout"
+            android:padding="6dp"
+            android:textColor="@color/coffee_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/ivCCart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivBackArrowC"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCCart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:padding="8dp"
+            android:src="@drawable/coffee_lock"
+            android:background="@color/coffee_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mtvCheckout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvCCoffeeOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="@color/coffee_grey"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/clCToolbar"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCCoffeeImg"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="4dp"
+                android:src="@drawable/coffee_img_one"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvCCoffeeName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/centurygothicbold"
+                android:includeFontPadding="false"
+                android:padding="2dp"
+                android:text="Lite Black Coffee Special Beans"
+                android:textColor="@color/coffee_color"
+                android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivCCoffeeImg"
+                tools:ignore="HardcodedText"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCCoffeeClose"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                android:backgroundTint="@color/coffee_color"
+                android:src="@drawable/coffee_close"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvCCoffeeWeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/centurygothic"
+                android:includeFontPadding="false"
+                android:padding="2dp"
+                android:text="@string/c_coffee_weight"
+                android:textColor="@color/coffee_color"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/mtvCCoffeeName"
+                app:layout_constraintStart_toEndOf="@id/ivCCoffeeImg"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvCCoffeePrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/centurygothicbold"
+                android:includeFontPadding="false"
+                android:padding="2dp"
+                android:text="@string/c_coffee_price"
+                android:textColor="@color/coffee_color"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/mtvCCoffeeWeight"
+                app:layout_constraintStart_toEndOf="@id/ivCCoffeeImg"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvCCoffeeQty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/mtvCCoffeeWeight"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:strokeColor="@color/coffee_color"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvSub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/centurygothicbold"
+                        android:includeFontPadding="false"
+                        android:padding="3dp"
+                        android:text="@string/decrement"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/mtvCount"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/centurygothicbold"
+                        android:includeFontPadding="false"
+                        android:padding="3dp"
+                        android:text="@string/qty"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/mtvAdd"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/mtvSub"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/centurygothicbold"
+                        android:includeFontPadding="false"
+                        android:padding="3dp"
+                        android:text="@string/increment"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/mtvCount"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvCCoffeeTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/coffee_grey"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/mcvCCoffeeOne"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCCoffeeImgT"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="4dp"
+                android:src="@drawable/coffee_img_two"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvCCoffeeNameT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/centurygothicbold"
+                android:includeFontPadding="false"
+                android:padding="2dp"
+                android:text="Lite Black Coffee Special Beans"
+                android:textColor="@color/coffee_color"
+                android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivCCoffeeImgT"
+                tools:ignore="HardcodedText"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCCoffeeCloseT"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                android:backgroundTint="@color/coffee_color"
+                android:src="@drawable/coffee_close"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvCCoffeeWeightT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/centurygothic"
+                android:includeFontPadding="false"
+                android:padding="2dp"
+                android:text="@string/c_coffee_weight"
+                android:textColor="@color/coffee_color"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/mtvCCoffeeNameT"
+                app:layout_constraintStart_toEndOf="@id/ivCCoffeeImgT"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvCCoffeePriceT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/centurygothicbold"
+                android:includeFontPadding="false"
+                android:padding="2dp"
+                android:text="@string/c_coffee_price"
+                android:textColor="@color/coffee_color"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/mtvCCoffeeWeightT"
+                app:layout_constraintStart_toEndOf="@id/ivCCoffeeImgT"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvCCoffeeQtyT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/mtvCCoffeeWeightT"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:strokeColor="@color/coffee_color"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvSubT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/centurygothicbold"
+                        android:includeFontPadding="false"
+                        android:padding="3dp"
+                        android:text="@string/decrement"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/mtvCountT"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvCountT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/centurygothicbold"
+                        android:includeFontPadding="false"
+                        android:padding="3dp"
+                        android:text="@string/qty"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/mtvAddT"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/mtvSubT"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvAddT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/centurygothicbold"
+                        android:includeFontPadding="false"
+                        android:padding="3dp"
+                        android:text="@string/increment"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/mtvCountT"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvCCoffeeTh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/coffee_grey"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/mcvCCoffeeTwo"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCCoffeeImgTh"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="4dp"
+                android:src="@drawable/coffee_img_two"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvCCoffeeNameTh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/centurygothicbold"
+                android:includeFontPadding="false"
+                android:padding="2dp"
+                android:text="Lite Black Coffee Special Beans"
+                android:textColor="@color/coffee_color"
+                android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivCCoffeeImgTh"
+                tools:ignore="HardcodedText"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCCoffeeCloseTh"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                android:backgroundTint="@color/coffee_color"
+                android:src="@drawable/coffee_close"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvCCoffeeWeightTh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/centurygothic"
+                android:includeFontPadding="false"
+                android:padding="2dp"
+                android:text="@string/c_coffee_weight"
+                android:textColor="@color/coffee_color"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/mtvCCoffeeNameTh"
+                app:layout_constraintStart_toEndOf="@id/ivCCoffeeImgTh"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvCCoffeePriceTh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/centurygothicbold"
+                android:includeFontPadding="false"
+                android:padding="2dp"
+                android:text="@string/c_coffee_price"
+                android:textColor="@color/coffee_color"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/mtvCCoffeeWeightTh"
+                app:layout_constraintStart_toEndOf="@id/ivCCoffeeImgTh"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvCCoffeeQtyTh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/mtvCCoffeeWeightTh"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:strokeColor="@color/coffee_color"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvSubTh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/centurygothicbold"
+                        android:includeFontPadding="false"
+                        android:padding="3dp"
+                        android:text="@string/decrement"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/mtvCountTh"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvCountTh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/centurygothicbold"
+                        android:includeFontPadding="false"
+                        android:padding="3dp"
+                        android:text="@string/qty"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/mtvAddTh"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/mtvSubTh"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvAddTh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/centurygothicbold"
+                        android:includeFontPadding="false"
+                        android:padding="3dp"
+                        android:text="@string/increment"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/mtvCountTh"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPromo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@color/coffee_light_grey"
+        app:layout_constraintTop_toBottomOf="@id/mcvCCoffeeTh"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvPromoCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/centurygothicbold"
+            android:includeFontPadding="false"
+            android:padding="6dp"
+            android:text="@string/promo_code"
+            android:textColor="@color/coffee_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/mtvPCApply"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvPCApply"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/centurygothic"
+            android:includeFontPadding="false"
+            android:text="@string/apply"
+            android:textAlignment="center"
+            android:padding="6dp"
+            android:elevation="6dp"
+            android:shadowRadius="100"
+            android:background="@drawable/curve_border"
+            android:backgroundTint="@color/coffee_color"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCSubtotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/clPromo"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvSTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/centurygothicbold"
+            android:includeFontPadding="false"
+            android:padding="4dp"
+            android:text="@string/cart_subtotal"
+            android:textColor="@color/coffee_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/mtvSTPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvSTPrice"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/centurygothicbold"
+            android:includeFontPadding="false"
+            android:text="\u20B9 2300/-"
+            android:textAlignment="center"
+            android:padding="4dp"
+            android:elevation="6dp"
+            android:shadowRadius="100"
+            android:textColor="@color/coffee_color"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/vStrokeOne"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/coffee_grey"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/clCSubtotal"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCShipping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="6dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/clCSubtotal"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvShipping"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/centurygothicbold"
+            android:includeFontPadding="false"
+            android:padding="4dp"
+            android:text="@string/cart_shipping"
+            android:textColor="@color/coffee_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/mtvSPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvSPrice"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/centurygothicbold"
+            android:includeFontPadding="false"
+            android:text="\u20B9 100/-"
+            android:textAlignment="center"
+            android:padding="4dp"
+            android:elevation="6dp"
+            android:shadowRadius="100"
+            android:textColor="@color/coffee_color"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="HardCodedText"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/vStrokeTwo"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/coffee_grey"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/clCShipping"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCTPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="6dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/clCShipping"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvTotalPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/centurygothicbold"
+            android:includeFontPadding="false"
+            android:padding="4dp"
+            android:text="Total Price"
+            android:textColor="@color/coffee_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/mtvTPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvTPrice"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/centurygothicbold"
+            android:includeFontPadding="false"
+            android:text="\u20B9 2400/-"
+            android:textAlignment="center"
+            android:padding="4dp"
+            android:elevation="6dp"
+            android:shadowRadius="100"
+            android:textColor="@color/coffee_color"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="HardCodedText"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCFTPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/clCTPrice"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvFinalTPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/centurygothicbold"
+            android:includeFontPadding="false"
+            android:padding="4dp"
+            android:text="\u20B9 2400/-"
+            android:textColor="@color/coffee_color"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardCodedText"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mBtnContinue"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/centurygothicbold"
+            android:includeFontPadding="false"
+            android:text="Continue"
+            app:elevation="60dp"
+            android:shadowRadius="100"
+            android:layout_marginHorizontal="6dp"
+            android:padding="4dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:backgroundTint="@color/coffee_color"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="HardCodedText"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
